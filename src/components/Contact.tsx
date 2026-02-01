@@ -19,7 +19,7 @@ const ContactCard = ({
   subtext: string;
 }) => {
   return (
-    <div className="card card-compact border border-slate-700 shadow-xl card-color p-3 xl:size-1/3 mt-2 xl:mt-0">
+    <div className="card card-compact border border-slate-700 shadow-xl card-color p-3 xl:size-1/3 mt-2 xl:mt-0 rounded-lg me-2 hover:scale-[1.02] transition-transform duration-200 ease-in-out">
       <div className="flex">
         <div className="relative">
           <img
