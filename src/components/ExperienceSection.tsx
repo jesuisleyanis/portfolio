@@ -60,7 +60,7 @@ const ExperiencesRow = ({
 
 export default function ExperienceSection() {
   return (
-    <div className="card card-compact border border-slate-700 shadow-xl card-color p-3">
+    <div className="card card-compact border border-slate-700 shadow-xl card-color p-3 rounded-lg">
       <div className="flex">
         <WalletIcon
           className="fill-zinc-100/10"
