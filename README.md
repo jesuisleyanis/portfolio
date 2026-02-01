@@ -48,3 +48,26 @@ export default tseslint.config({
   },
 })
 ```
+
+## Docker + Traefik deployment (VPS)
+
+This repo includes a production Docker image and a sample compose file for Traefik.
+
+1) Build locally (optional)
+```bash
+docker build -t portfolio:local .
+```
+
+2) On your VPS, copy `deploy/docker-compose.yml` and create an `.env` file next to it:
+```bash
+IMAGE=ghcr.io/<owner>/<repo>:latest
+DOMAIN=example.com
+TRAEFIK_NETWORK=traefik
+```
+
+3) Start the container:
+```bash
+docker compose up -d
+```
+
+The GitHub Actions workflow in `.github/workflows/deploy.yml` builds and pushes the image to GHCR on every push to `main`, then redeploys on your VPS over SSH.
