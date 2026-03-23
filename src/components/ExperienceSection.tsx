@@ -3,6 +3,7 @@ import { WalletIcon } from "./icons/Wallet";
 import Izydesk from "../assets/izydesk.png";
 import Dragon from "../assets/serpent.png";
 import Mediprix from "../assets/médiprix.png";
+import Web from "../assets/programmation-web.png";
 
 const Badge = ({ text }: { text: string }) => {
   return (
@@ -29,7 +30,7 @@ const ExperiencesRow = ({
 }) => {
   return (
     <div className="flex mt-2">
-      <img className="w-9 object-contain" src={img} alt={`Logo ${text}`} />
+      <img className="w-9 h-9 object-cover rounded-xl" src={img} alt={`Logo ${text}`} />
       <div className="flex flex-col ms-4 w-full">
         <div className="flex">
           <a className="text-sm font-bold flex mr-3" href={target}>
@@ -60,7 +61,7 @@ const ExperiencesRow = ({
 
 export default function ExperienceSection() {
   return (
-    <section className="card card-compact border border-slate-700 shadow-xl card-color p-3 rounded-lg" aria-label="Expériences professionnelles">
+    <section className="card card-compact border border-slate-700 shadow-xl card-color p-3 rounded-lg w-full" aria-label="Work experience">
       <div className="flex">
         <WalletIcon
           className="fill-zinc-100/10"
@@ -71,18 +72,26 @@ export default function ExperienceSection() {
       </div>
       <div className="mt-3">
         <ExperiencesRow
+          img={Web}
+          target={"#"}
+          text={"Entrepreneur / Freelance"}
+          libelle={"Building and selling SaaS products"}
+          duration="January 2026 — Now"
+          badges={["Next.js", "Prisma", "Stripe"]}
+        />
+        <ExperiencesRow
           img={Izydesk}
           target={"https://izydesk.fr/"}
           text={"Izydesk"}
-          libelle={"Développeur web fullstack"}
-          duration="Jully 2024 — Now"
+          libelle={"Fullstack web developer"}
+          duration="July 2024 — Now"
           badges={["Symfony", "React", "Bootstrap"]}
         />
         <ExperiencesRow
           img={Dragon}
           target={"https://www.dragonsports.eu/fr/"}
           text={"DragonSports"}
-          libelle={"Développeur web fullstack"}
+          libelle={"Fullstack web developer"}
           duration="December 2023 — February 2024"
           badges={["Laravel", "Bootstrap"]}
         />
@@ -90,8 +99,8 @@ export default function ExperienceSection() {
           img={Mediprix}
           target={"https://mediprix.fr/"}
           text={"Médiprix"}
-          libelle={"Développeur web fullstack"}
-          duration="May 2023 — Jully 2023"
+          libelle={"Fullstack web developer"}
+          duration="May 2023 — July 2023"
           badges={["Laravel", "Ionic", "Tailwind"]}
         />
       </div>
