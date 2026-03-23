@@ -21,7 +21,7 @@ const ProjectsRow = ({
   return (
     <a href={target}>
       <div className="flex p-2 hover:bg-black/20 cursor-pointer rounded-lg transition-colors">
-        <img className="w-9 object-contain" src={img} alt="img" />
+        <img className="w-9 object-contain" src={img} alt={`Icône du projet ${text}`} />
         <div className="flex flex-col ms-4">
           <p className="text-sm font-bold flex">{text}</p>
           {isFinnish ? (
@@ -44,14 +44,14 @@ const ProjectsRow = ({
 
 export default function ProjectsSection() {
   return (
-    <div className="card card-compact border border-slate-700 shadow-xl card-color p-3 lg:mr-5 rounded-lg">
+    <section className="card card-compact border border-slate-700 shadow-xl card-color p-3 lg:mr-5 rounded-lg" aria-label="Projets">
       <div className="flex">
         <RocketIcon
           color="#f4f4f51a"
           className="fill-zinc-100/10"
           strokeWidth={1.5}
         />
-        <p className="ps-2 icons-section text-sm font-bold">My projects</p>
+        <h2 className="ps-2 icons-section text-sm font-bold">My projects</h2>
       </div>
       <div className="mt-3">
         <ProjectsRow
@@ -85,6 +85,6 @@ export default function ProjectsSection() {
           isFinnish={false}
         ></ProjectsRow>
       </div>
-    </div>
+    </section>
   );
 }

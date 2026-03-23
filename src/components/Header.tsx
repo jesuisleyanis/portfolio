@@ -15,7 +15,7 @@ const IconButton = ({
   size?: number;
 }) => {
   return (
-    <a href={target} className="btn btn-sm btn-circle btn-outline">
+    <a href={target} className="btn btn-sm btn-circle btn-outline" rel="noopener noreferrer" target="_blank">
       <Icon size={size} />
     </a>
   );
@@ -23,12 +23,12 @@ const IconButton = ({
 
 export default function Header() {
   return (
-    <div className="flex flex-col lg:flex-row lg:space-x-8">
+    <header className="flex flex-col lg:flex-row lg:space-x-8">
       <div className="flex flex-col items-start place-content-center gap-2 mt-12 lg:w-2/3">
         <p className="mb-5">Welcome on my personal website</p>
         <div className="inline-flex overflow-visible">
-          <p className="text-5xl font-bold bg-gradient-to-r mr-3 pb-3">Yanis</p>
-          <p className="text-5xl font-bold gradient-text">Capelle</p>
+          <h1 className="text-5xl font-bold bg-gradient-to-r mr-3 pb-3">Yanis<span className="sr-only"> Capelle — Développeur Fullstack</span></h1>
+          <p className="text-5xl font-bold gradient-text" aria-hidden="true">Capelle</p>
         </div>
         <p className="text-xl font-semibold">Fullstack developer</p>
         <p className="text-l text-zinc-500 break-words">
@@ -62,8 +62,8 @@ export default function Header() {
         </div>
       </div>
       <div className="w-full h-full flex justify-center items-end">
-        <img src={Moi} alt="photo de yanis" className="rounded-full h-56" />
+        <img src={Moi} alt="Photo de Yanis Capelle, développeur web fullstack" className="rounded-full h-56" />
       </div>
-    </div>
+    </header>
   );
 }

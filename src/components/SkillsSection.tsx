@@ -25,7 +25,7 @@ const Skill = ({
 
 export default function SkillsSection() {
   return (
-    <div>
+    <section aria-label="Compétences">
       <Code>
         <GraduationCap size={17} className="mr-1" />
         Skills
@@ -79,6 +79,6 @@ export default function SkillsSection() {
           }
         />
       </div>
-    </div>
+    </section>
   );
 }

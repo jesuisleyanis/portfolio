@@ -29,7 +29,7 @@ const ExperiencesRow = ({
 }) => {
   return (
     <div className="flex mt-2">
-      <img className="w-9 object-contain" src={img} alt="img" />
+      <img className="w-9 object-contain" src={img} alt={`Logo ${text}`} />
       <div className="flex flex-col ms-4 w-full">
         <div className="flex">
           <a className="text-sm font-bold flex mr-3" href={target}>
@@ -60,14 +60,14 @@ const ExperiencesRow = ({
 
 export default function ExperienceSection() {
   return (
-    <div className="card card-compact border border-slate-700 shadow-xl card-color p-3 rounded-lg">
+    <section className="card card-compact border border-slate-700 shadow-xl card-color p-3 rounded-lg" aria-label="Expériences professionnelles">
       <div className="flex">
         <WalletIcon
           className="fill-zinc-100/10"
           strokeWidth={1.5}
           size={24}
         ></WalletIcon>
-        <p className="ps-2 icons-section text-sm font-bold">Experiences</p>
+        <h2 className="ps-2 icons-section text-sm font-bold">Experiences</h2>
       </div>
       <div className="mt-3">
         <ExperiencesRow
@@ -95,6 +95,6 @@ export default function ExperienceSection() {
           badges={["Laravel", "Ionic", "Tailwind"]}
         />
       </div>
-    </div>
+    </section>
   );
 }

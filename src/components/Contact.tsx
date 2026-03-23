@@ -24,7 +24,7 @@ const ContactCard = ({
         <div className="relative">
           <img
             src={img}
-            alt="img"
+            alt={`Photo de contact ${text}`}
             className="rounded-full object-contain min-w-12 w-12 aspect-auto"
           />
           <div className="absolute bottom-0 right-0 bg-white rounded-full p-0.5">
@@ -49,7 +49,7 @@ const ContactCard = ({
 
 export default function ContactSection() {
   return (
-    <div>
+    <section aria-label="Contact">
       <Code>
         <Contact size={17} className="mr-1" />
         Contact
@@ -62,7 +62,7 @@ export default function ContactSection() {
           subtext="Follow me on instagram"
           target={"https://www.instagram.com/yanis_cpl_/"}
           icon={
-            <img src={Instagram} className="h-4 aspect-auto object" alt="img" />
+            <img src={Instagram} className="h-4 aspect-auto object" alt="Instagram" />
           }
         />
 
@@ -72,7 +72,7 @@ export default function ContactSection() {
           subtext="Here is my linkedin"
           target="https://www.linkedin.com/in/yanis-capelle-3b1077231/"
           icon={
-            <img src={Linkedin} className="h-4 aspect-auto object" alt="img" />
+            <img src={Linkedin} className="h-4 aspect-auto object" alt="LinkedIn" />
           }
         />
 
@@ -82,10 +82,10 @@ export default function ContactSection() {
           subtext="Contact me via my mail"
           target="mailto:yanis.capelle@ecoles-epsi.net"
           icon={
-            <img src={Gmail} className="h-4 aspect-auto object" alt="img" />
+            <img src={Gmail} className="h-4 aspect-auto object" alt="Email" />
           }
         />
       </div>
-    </div>
+    </section>
   );
 }
