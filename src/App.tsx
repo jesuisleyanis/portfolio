@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
     return (
       <div className="min-h-screen flex flex-col items-center">
-        <main>
+        <main className="flex place-content-center w-full">
           <Home></Home>
         </main>
         <Footer></Footer>
